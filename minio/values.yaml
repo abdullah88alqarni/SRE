@@ -1,6 +1,7 @@
 minio:
   rootUser: "admin"
   rootPassword: "admin12345"
+  mode: standalone  # Important: prevents 16 pods
   persistence:
     enabled: true
     existingClaim: ""
@@ -8,11 +9,11 @@ minio:
     volumeName: ""
     accessMode: ReadWriteOnce
     size: 2Gi
-  spec:
-    replicas: 2
-    template:
-     spec:
-       containers:
-         resources:
-           requests:
-             memory: 1Gi
+  replicas: 1  # Use only in standalone mod
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 250m
+    limits:
+      memory: 2Gi
+      cpu: 500m
