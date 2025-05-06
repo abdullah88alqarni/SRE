@@ -5,7 +5,7 @@ keycloak:
   adminUser: admin
   ## @param auth.adminPassword Keycloak administrator password for the new user
   ##
-  adminPassword: "admin"
+  adminPassword: "admin12345"
   ## @param auth.existingSecret Existing secret containing Keycloak admin password
   ##
   existingSecret: ""
