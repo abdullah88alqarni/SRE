@@ -9,8 +9,8 @@ minio:
     accessMode: ReadWriteOnce
     size: 2Gi
   spec:
-  	replicas: 2
-  	template:
+    replicas: 2
+    template:
      spec:
        containers:
          resources:
